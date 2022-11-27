@@ -27,6 +27,7 @@ function startGame(){
     cells.forEach(cell =>{
         cell.addEventListener("click", cellClick)
     })
+    resetBtn.addEventListener("click", resetGame)
     running=true
 }
 
@@ -78,4 +79,15 @@ function checkWinner(){
     }else{
         changePlayer()
     }
+}
+
+function resetGame(){
+    currentPlayer = "X"
+    running = false
+    messageEl.textContent = "Welcome to Tic, Tac, Toe"
+    options = ["", "", "","", "", "","", "", ""]
+    cells.forEach(cell => {
+        cell.textContent = ""
+    })
+    startGame()
 }
