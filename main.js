@@ -66,8 +66,8 @@ function checkWinner(){
             won=true
             break
         }
-
     }
+    
     if(won){
         running = false
         messageEl.textContent = `${currentPlayer} Won`

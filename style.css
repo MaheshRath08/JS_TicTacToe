@@ -5,7 +5,7 @@
     font-family:cursive;
 }
 body{
-    background-color: rgb(254, 240, 255);
+    background-color: #fef0ff;
 }
 .container{
     position: absolute;
@@ -22,13 +22,12 @@ body{
     height: 150px;
     border: 1px solid black;
     cursor: pointer;
-    background-color: #f1f1f1;
     text-align: center;
     line-height: 150px;
     font-size: 3rem;
 }
-.message{
-    
+.cells:hover{background-color: #eb91a3;}
+.message{ 
     text-align: center;
     margin-top: 1.5rem;
     font-size: 2rem;
@@ -46,3 +45,8 @@ button{
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
+button:hover{background-color: cadetblue;}
+.up{border-top: none;}
+.bot{border-bottom: none;}
+.left{border-left: none;}
+.right{border-right: none;}
