@@ -82,6 +82,8 @@ function checkWinner(){
 }
 
 function resetGame(){
+    wastedSfx.pause()
+    wastedSfx.currentTime = 0
     currentPlayer = "X"
     running = false
     messageEl.textContent = "Welcome to Tic, Tac, Toe"
