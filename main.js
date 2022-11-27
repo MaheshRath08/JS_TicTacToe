@@ -2,6 +2,10 @@ const cells = document.querySelectorAll(".cells")
 const messageEl = document.querySelector(".message")
 const resetBtn = document.getElementById("reset")
 
+let clickSfx = new Audio("assets/click.wav")
+let winSfx = new Audio("assets/win.wav")
+let wastedSfx = new Audio("assets/wasted.mp3")
+
 let currentPlayer = "X"
 let running = false
 
@@ -45,6 +49,7 @@ function cellUpdate(cell, index){
 function changePlayer(){
     currentPlayer = (currentPlayer=="X") ? "O" : "X"
     messageEl.textContent = `${currentPlayer}'s turn`
+    clickSfx.play()
 }
 
 function checkWinner(){
@@ -65,9 +70,11 @@ function checkWinner(){
     if(won){
         running = false
         messageEl.textContent = `${currentPlayer} Won`
+        winSfx.play()
     }else if(!options.includes("")){
         messageEl.textContent = "It's a draw!"
         running=false
+        wastedSfx.play()
     }else{
         changePlayer()
     }
