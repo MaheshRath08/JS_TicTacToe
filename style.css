@@ -5,7 +5,7 @@
     font-family:cursive;
 }
 body{
-    background-color: #fef0ff;
+    background-color: #fcd3ff;
 }
 .container{
     position: absolute;
@@ -20,7 +20,7 @@ body{
 .cells{
     width: 150px;
     height: 150px;
-    border: 1px solid black;
+    border: 1px solid #555;
     cursor: pointer;
     text-align: center;
     line-height: 150px;
@@ -31,6 +31,7 @@ body{
     text-align: center;
     margin-top: 1.5rem;
     font-size: 2rem;
+    color: #555;
 }
 button{
     padding: 0.5rem 3rem;
