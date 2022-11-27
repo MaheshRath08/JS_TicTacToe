@@ -32,7 +32,7 @@ function cellClick(){
     if(options[index] != "" || !running){
         return
     }
-    
+
     cellUpdate(this, index) 
     checkWinner()
 }
@@ -49,26 +49,26 @@ function changePlayer(){
 
 function checkWinner(){
     let won = false
-    for(let i = 0; i<conditions.length;i++){
+    for(let i = 0; i<conditions.length ;i++){
         let cellA = options[conditions[i][0]] 
         let cellB = options[conditions[i][1]] 
         let cellC = options[conditions[i][2]] 
 
-        if(cellA == cellB && cellB == cellC){
+        if(cellA == "" || cellB == "" || cellC == ""){
             continue
         }else if(cellA == cellB && cellB == cellC){
             won=true
             break
         }
 
-        if(won){
-            running = false
-            messageEl.textContent = `${currentPlayer} Won`
-        }else if(!options.includes("")){
-            messageEl.textContent = "It's a draw!"
-            running=false
-        }else{
-            changePlayer()
-        }
+    }
+    if(won){
+        running = false
+        messageEl.textContent = `${currentPlayer} Won`
+    }else if(!options.includes("")){
+        messageEl.textContent = "It's a draw!"
+        running=false
+    }else{
+        changePlayer()
     }
 }
