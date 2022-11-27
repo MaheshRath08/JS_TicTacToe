@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:cursive;
+}
+body{
+    background-color: rgb(254, 240, 255);
+}
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-60%);
+}
+.cell-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.cells{
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    text-align: center;
+    line-height: 150px;
+    font-size: 3rem;
+}
+.message{
+    
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 2rem;
+}
+button{
+    padding: 0.5rem 3rem;
+    font-size: 1.1rem;
+    display: block;
+    margin: 0 auto;
+    margin-top: 3rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #555;
+    color: #efefef;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
